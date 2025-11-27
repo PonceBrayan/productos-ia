@@ -1,0 +1,47 @@
+[
+  {
+    "pred_class_index": 0,
+    "pred_class_label": "Bajo",
+    "probabilities": {
+      "Bajo": 0.9965849093145573,
+      "Medio": 0.0034150887343533925,
+      "Alta": 1.951089346862597e-09
+    }
+  },
+  {
+    "pred_class_index": 2,
+    "pred_class_label": "Alta",
+    "probabilities": {
+      "Bajo": 7.27094054686426e-15,
+      "Medio": 4.027690747723528e-11,
+      "Alta": 0.9999999999597158
+    }
+  },
+  {
+    "pred_class_index": 1,
+    "pred_class_label": "Medio",
+    "probabilities": {
+      "Bajo": 1.2136470006173796e-05,
+      "Medio": 0.9999345352987145,
+      "Alta": 5.332823127949742e-05
+    }
+  },
+  {
+    "pred_class_index": 2,
+    "pred_class_label": "Alta",
+    "probabilities": {
+      "Bajo": 2.105793684342382e-11,
+      "Medio": 1.1557412017517634e-07,
+      "Alta": 0.9999998844048219
+    }
+  },
+  {
+    "pred_class_index": 1,
+    "pred_class_label": "Medio",
+    "probabilities": {
+      "Bajo": 8.611967266383268e-05,
+      "Medio": 0.9727394087027018,
+      "Alta": 0.02717447162463428
+    }
+  }
+]

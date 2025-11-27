@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "strategy": "threshold_max_probability",
+  "thresholds": {
+    "accept": 0.6,
+    "review": 0.4
+  },
+  "tie_breaker": "argmax",
+  "notes": "Ajustar tras calibrar probabilidades en validación."
+}

@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "properties": {
+    "PromedioPonderado": {
+      "type": "string",
+      "enum": [
+        "Bajo",
+        "Bueno",
+        "Excelente"
+      ]
+    },
+    "DeudaFinanciera": {
+      "type": "string",
+      "enum": [
+        "Sindeuda",
+        "Deudabaja",
+        "Deudamedia",
+        "Deudaalta"
+      ]
+    },
+    "SintomasDepresion": {
+      "type": "string",
+      "enum": [
+        "Bajo",
+        "Medio",
+        "Alto"
+      ]
+    },
+    "Edad": {
+      "type": "string",
+      "enum": [
+        "Joven",
+        "Adultojoven",
+        "Adulto",
+        "Adultomayor"
+      ]
+    },
+    "SituacionLaboral": {
+      "type": "string",
+      "enum": [
+        "Notrabaja",
+        "Mediotiempo",
+        "Tiempocompleto"
+      ]
+    },
+    "Trasladado": {
+      "type": "string",
+      "enum": [
+        "No",
+        "Si"
+      ]
+    },
+    "Asistencia": {
+      "type": "string",
+      "enum": [
+        "Muybajo",
+        "Bajo",
+        "Medio",
+        "Alta"
+      ]
+    }
+  },
+  "required": [
+    "PromedioPonderado",
+    "DeudaFinanciera",
+    "SintomasDepresion",
+    "Edad",
+    "SituacionLaboral",
+    "Trasladado",
+    "Asistencia"
+  ],
+  "additionalProperties": false
+}

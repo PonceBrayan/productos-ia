@@ -1,0 +1,47 @@
+[
+  {
+    "PromedioPonderado": "Excelente",
+    "DeudaFinanciera": "Sindeuda",
+    "SintomasDepresion": "Bajo",
+    "Edad": "Adultojoven",
+    "SituacionLaboral": "Mediotiempo",
+    "Trasladado": "No",
+    "Asistencia": "Alta"
+  },
+  {
+    "PromedioPonderado": "Bajo",
+    "DeudaFinanciera": "Deudaalta",
+    "SintomasDepresion": "Medio",
+    "Edad": "Joven",
+    "SituacionLaboral": "Notrabaja",
+    "Trasladado": "Si",
+    "Asistencia": "Muybajo"
+  },
+  {
+    "PromedioPonderado": "Excelente",
+    "DeudaFinanciera": "Deudabaja",
+    "SintomasDepresion": "Medio",
+    "Edad": "Adultojoven",
+    "SituacionLaboral": "Mediotiempo",
+    "Trasladado": "No",
+    "Asistencia": "Medio"
+  },
+  {
+    "PromedioPonderado": "Bueno",
+    "DeudaFinanciera": "Deudamedia",
+    "SintomasDepresion": "Medio",
+    "Edad": "Adulto",
+    "SituacionLaboral": "Tiempocompleto",
+    "Trasladado": "No",
+    "Asistencia": "Bajo"
+  },
+  {
+    "PromedioPonderado": "Bueno",
+    "DeudaFinanciera": "Deudamedia",
+    "SintomasDepresion": "Bajo",
+    "Edad": "Adulto",
+    "SituacionLaboral": "Notrabaja",
+    "Trasladado": "Si",
+    "Asistencia": "Medio"
+  }
+]
