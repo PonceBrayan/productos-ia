@@ -1216,7 +1216,48 @@ def vista_redes():
 # Vista Clustering
 # ==========================
 def vista_clustering():
-    st.title("📊 Vista de Clustering")
+    st.title("📊 Análisis de Clustering")
+    st.write("Visualiza grupos de estudiantes según patrones de riesgo.")
+    # ===== IMPORTAR EXCEL =====
+    st.markdown("### 📁 Cargar datos")
+    
+    uploaded_file = st.file_uploader(
+        "Sube tu archivo Excel con datos de estudiantes",
+        type=["xlsx", "xls"],
+        help="El archivo debe contener las columnas necesarias para el análisis"
+    )
+
+    if uploaded_file is not None:
+        # Leer el archivo Excel
+        try:
+            df = pd.read_excel(uploaded_file)
+            
+            st.success(f"✅ Archivo cargado correctamente: {uploaded_file.name}")
+            st.write(f"**Filas:** {len(df)} | **Columnas:** {len(df.columns)}")
+            
+            # Mostrar preview de los datos
+            with st.expander("👁️ Ver vista previa de los datos"):
+                st.dataframe(df.head(10), use_container_width=True)
+            
+            # Guardar en session_state para usar después
+            st.session_state["df_clustering"] = df
+            
+        except Exception as e:
+            st.error(f"❌ Error al cargar el archivo: {str(e)}")
+    else:
+        st.info("👆 Selecciona un archivo Excel para comenzar el análisis.")
+
+    # ===== RESTO DE TU CÓDIGO DE CLUSTERING =====
+    # Aquí va todo lo que ya tenías (gráficos, análisis, etc.)
+    # Si hay datos cargados, los usas; si no, puedes mostrar un mensaje o datos de ejemplo
+    
+    if "df_clustering" in st.session_state:
+        df = st.session_state["df_clustering"]
+        st.markdown("---")
+        st.markdown("### 📈 Interpretación de clustering")
+        # ... aquí tu código de gráficos, clusters, etc.
+    else:
+        st.warning("⚠️ Carga un archivo para ver el análisis de clustering.")
 
     # --- Estilos para badges ---
     st.markdown(
@@ -1275,59 +1316,6 @@ def vista_clustering():
         """,
         unsafe_allow_html=True
     )
-
-    # --- Tabla ---
-    DATA_PATH = BASE_DIR / "DATA-CLUSTERING-SOLO-NUMERO.xlsx"
-
-    try:
-        df_cluster = pd.read_excel(DATA_PATH)
-
-        # estilos de tabla
-        st.markdown(
-        """
-        <style>
-        /* Contenedor redondeado */
-        .stDataFrame div[data-testid="stHorizontalBlock"] {
-        border-radius: 12px;
-        overflow: hidden;
-        }
-
-        /* Quitar líneas fuertes y dejar look plano */
-        .stDataFrame table {
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        border: none;
-        }
-        .stDataFrame td, .stDataFrame th {
-        border: none !important;
-        padding: 0.5rem 0.75rem;
-        }
-
-        /* Header oscuro suave */
-        .stDataFrame th {
-        background: #111827;
-        color: #e5e7eb;
-        font-weight: 600;
-        }
-
-        /* Fila hover sutil */
-        .stDataFrame tbody tr:hover {
-        background-color: rgba(15, 23, 42, 0.06);
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-        )
-
-        st.data_editor(
-        df_cluster,
-        use_container_width=True,
-        disabled=True,          # solo lectura
-        )
-
-    except Exception as e:
-        st.error(f"Error cargando el Excel de clustering:\n{e}")
-
 
 # ==========================
 # Selector de vista
