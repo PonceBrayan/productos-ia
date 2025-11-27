@@ -840,7 +840,378 @@ def vista_redes():
             """,
             unsafe_allow_html=True,
         )
+        elif caso_sel["Nombre"] == "Aylan Mostacero":
+        # 1. Diagnóstico del estado actual
+            st.markdown(
+            """
+            <div class="card">
+              <h5>Diagnóstico del estado actual</h5>
+              <p><b>Perfil general:</b></p>
+              <p>
+              Estudias <b>Teología</b>, tienes <b>30 años</b> (adulto). 
+              Tu promedio ponderado es <b>bueno</b>, lo que indica capacidades académicas sólidas. 
+              Trabajas a <b>tiempo completo</b>, con <b>asistencia baja</b> y <b>desarrollo de tareas bajo</b>.
+              </p>
+              <p><b>Contexto familiar y económico:</b></p>
+              <p>
+              Procedes de <b>provincia</b> y vives con <b>familiares</b>, lo que implica apoyo pero también responsabilidades. 
+              Tienes <b>deuda financiera media</b>. Tu padre está <b>desempleado</b> y tu madre es <b>ama de casa</b>, 
+              por lo que probablemente sientas una fuerte responsabilidad económica.
+              </p>
+              <p><b>Estado emocional:</b></p>
+              <p>
+              Presentas <b>sintomatología depresiva en nivel medio</b>, que puede afectar energía, motivación, 
+              concentración y esperanza respecto al futuro académico.
+              </p>
+              <p>
+              <b>Conclusión inicial:</b> hay una tensión fuerte entre tu deseo de estudiar y la realidad: 
+              trabajo a tiempo completo, presión económica, responsabilidad familiar y estado emocional. 
+              Esto explica por qué, aunque tu promedio es bueno, tu asistencia y tareas están bajas.
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
+        # 2. Nivel de riesgo alto
+            st.markdown(
+            """
+            <div class="card">
+              <h5>Nivel de riesgo de deserción: ALTO</h5>
+              <p>Se explica principalmente por la combinación de:</p>
+              <ul>
+                <li><b>Económico:</b> deuda media + padre desempleado + trabajo a tiempo completo → tendencia a priorizar el trabajo.</li>
+                <li><b>Académico:</b> asistencia baja y pocas tareas → desconexión con clases y vacíos en contenidos.</li>
+                <li><b>Emocional:</b> síntomas depresivos medios → cansancio, apatía, pensamientos como “no voy a poder con todo”.</li>
+                <li><b>Familiar:</b> posible carga de “tengo que responder por mi familia” y poca comprensión de la exigencia universitaria.</li>
+              </ul>
+              <p>
+              No estás en riesgo alto por falta de capacidad, sino por <b>sobrecarga de responsabilidades + contexto económico + estado emocional</b>.
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # 3. Fortalezas y debilidades
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Fortalezas</h5>
+                  <ul>
+                    <li><b>Promedio bueno</b> a pesar de trabajar tiempo completo, tener deuda y síntomas depresivos.</li>
+                    <li>Estar en Teología implica <b>interés por el sentido, los valores y el servicio</b>.</li>
+                    <li>Sigues matriculado → a pesar de todo, <b>no has renunciado</b> a tu proyecto.</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            with col2:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Debilidades / puntos críticos</h5>
+                  <ul>
+                    <li>Dificultad para equilibrar <b>trabajo tiempo completo + estudios</b>.</li>
+                    <li><b>Baja asistencia</b> + pocas tareas → si continúa, tu promedio caerá y aumentará la frustración.</li>
+                    <li><b>Presión económica y familiar</b> que puede llevar a pausar o abandonar la carrera.</li>
+                    <li><b>Síntomas depresivos</b> que bajan energía y empujan a postergar y desconectarte.</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # 4. Recomendaciones + 5. Plan 7 días
+            col_rec, col_plan = st.columns(2)
+
+            with col_rec:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Recomendaciones personalizadas</h5>
+                  <span class="pill">Académicas</span>
+                  <ul>
+                    <li><b>Revisión urgente de carga académica:</b> evaluar reducir créditos/cursos si trabajas tiempo completo.</li>
+                    <li>Definir una <b>estrategia mínima de asistencia</b>: no faltar a clases críticas salvo emergencia real.</li>
+                    <li>Plan de tareas <b>“modo supervivencia”</b>: priorizar lo que más pesa en la nota y consolida contenidos clave.</li>
+                    <li>Técnica rápida de estudio: leer 10–15 minutos, escribir 3 ideas clave y 1 pregunta por texto.</li>
+                  </ul>
+                  <span class="pill">Emocionales</span>
+                  <ul>
+                    <li>Reconocer que estás bajo <b>mucha presión</b> (no es debilidad sentirte sobrepasado).</li>
+                    <li>Buscar <b>apoyo psicológico o de consejería</b> si la universidad lo ofrece.</li>
+                    <li>Rutina diaria de autocuidado (10–15 min): respiración, caminata breve, escribir qué te pesó y qué agradeces.</li>
+                  </ul>
+                  <span class="pill">Económicas / familiares</span>
+                  <ul>
+                    <li>Obtener <b>claridad sobre la deuda</b>: monto exacto, opciones de fraccionamiento, fechas límite reales.</li>
+                    <li>Explorar <b>beneficios o becas</b> internas por situación económica.</li>
+                    <li>Conversar con la familia, en la medida de lo posible, explicando que estás en un punto delicado.</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            with col_plan:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Plan de acción: próximos 7 días</h5>
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-circle">1</div>
+                      <span class="timeline-day">Días 1–2</span>
+                      <span class="timeline-content">
+                        Hacer una lista de cursos y horarios de trabajo. 
+                        Marcar en un calendario trabajo, clases y 2–3 bloques de estudio (30–45 min) reales.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">2</div>
+                      <span class="timeline-day">Día 3</span>
+                      <span class="timeline-content">
+                        Escribir o acudir a coordinación/tutor académico para revisar tu carga de cursos y priorizar materias.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">3</div>
+                      <span class="timeline-day">Día 4</span>
+                      <span class="timeline-content">
+                        Ir a oficina de créditos/deuda y pedir información clara sobre monto, plazos y opciones.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">4</div>
+                      <span class="timeline-day">Día 5</span>
+                      <span class="timeline-content">
+                        Acercarte a bienestar universitario / servicio psicológico para pedir orientación por estrés y presión económica.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">5</div>
+                      <span class="timeline-day">Día 6</span>
+                      <span class="timeline-content">
+                        Cumplir al menos <b>un bloque de estudio</b> y entregar una tarea pendiente, aunque no esté perfecta.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">6</div>
+                      <span class="timeline-day">Día 7</span>
+                      <span class="timeline-content">
+                        Revisar la semana: asistencia, tareas y pasos para pedir ayuda. 
+                        Ajustar el plan para la siguiente semana.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # 6. Mensaje final
+            st.markdown(
+            """
+            <div class="card">
+              <h5>Mensaje final</h5>
+              <p>
+              Tu situación es objetivamente difícil: no es falta de ganas, es una combinación de trabajo, economía, familia y estado emocional.
+              </p>
+              <p>
+              Pero hay dos datos clave: tu <b>promedio es bueno</b> y <b>sigues matriculado</b>. 
+              Eso muestra capacidad y perseverancia. El riesgo alto no significa que todo esté decidido,
+              sino que es urgente <b>hacer cambios y pedir ayuda</b>, no que todo esté perdido.
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    
+        elif caso_sel["Nombre"] == "Esau Morales":
+        # 1. Diagnóstico del estado actual
+            st.markdown(
+            """
+            <div class="card">
+              <h5>Diagnóstico del estado actual</h5>
+              <p><b>Perfil general:</b></p>
+              <p>
+              Estudias en <b>Ciencias de la Salud</b>, tienes <b>30 años</b> (adulto).
+              Tu promedio ponderado es <b>bueno</b>, lo que indica buenas bases y capacidad académica.
+              No trabajas actualmente, lo que te da más tiempo para estudiar, aunque puede aumentar la preocupación económica.
+              </p>
+              <p>
+              Tu <b>asistencia es media</b> y el <b>desarrollo de tareas es alto</b>: cumples muy bien con trabajos e informes, 
+              pero no siempre estás presente en clase.
+              </p>
+              <p><b>Contexto personal y familiar:</b></p>
+              <p>
+              Procedes de <b>provincia</b> y has tenido un <b>traslado</b>, lo que implica adaptación a nueva ciudad y entorno.
+              Vives con <b>familiares</b> en un contexto donde tu padre está <b>desempleado</b> y tu madre es <b>ama de casa</b>, 
+              ambos con nivel educativo de <b>secundaria</b>.
+              </p>
+              <p><b>Estado emocional:</b></p>
+              <p>
+              Presentas <b>sintomatología depresiva baja</b>: señales leves, pero importantes de cuidar (cansancio, preocupación, desánimo ocasional).
+              </p>
+              <p>
+              <b>Conclusión inicial:</b> académicamente estás bien orientado, pero hay puntos de atención en asistencia, 
+              presión económica y adaptación familiar/emocional. Esto sustenta un nivel de riesgo <b>medio</b>.
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # 2. Fortalezas y debilidades
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Fortalezas académicas</h5>
+                  <ul>
+                    <li><b>Promedio bueno</b> y <b>tareas altas</b> → responsabilidad y organización con trabajos e informes.</li>
+                    <li>En Ciencias de la Salud esto es clave por la carga práctica y de reportes.</li>
+                    <li><b>No trabajas</b> actualmente → tienes posibilidad real de organizar mejor tu tiempo de estudio.</li>
+                    <li><b>30 años</b> → mayor claridad de propósito y responsabilidad sobre tu vocación.</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            with col2:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Debilidades / puntos de alerta</h5>
+                  <ul>
+                    <li><b>Asistencia media</b> en una carrera donde las clases prácticas y laboratorios son vitales.</li>
+                    <li><b>Factor económico:</b> deuda media + padre desempleado + madre ama de casa → presión por “no fallar”.</li>
+                    <li><b>Traslado desde provincia</b> → adaptación a nuevo entorno, posibles expectativas altas de la familia.</li>
+                    <li><b>Apoyo académico limitado</b> en casa (padres con secundaria).</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # 3–4. Recomendaciones + Plan 7 días
+            col_rec, col_plan = st.columns(2)
+
+            with col_rec:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Recomendaciones personalizadas</h5>
+                  <span class="pill">Académicas</span>
+                  <ul>
+                    <li>Tratar la <b>asistencia</b> como algo “no negociable” en cursos clave (prácticas, laboratorios).</li>
+                    <li>Usar tu fortaleza en tareas para <b>reforzar contenidos de clase</b>, no solo para “entregar”.</li>
+                    <li>Diseñar una <b>semana tipo</b> con bloques fijos de estudio y repaso (1–2 h al día).</li>
+                    <li>Hablar con un <b>docente o tutor</b> para identificar cursos/competencias críticos.</li>
+                  </ul>
+                  <span class="pill">Emocionales</span>
+                  <ul>
+                    <li>Aunque los síntomas sean <b>bajos</b>, revisarlos a diario con 3 preguntas: ánimo (1–10), preocupación, gratitud.</li>
+                    <li>Buscar un <b>espacio de conversación segura</b> (familiar, amigo, consejería, psicología).</li>
+                    <li>Programar <b>descanso intencional</b> sin culpa: 15–20 min para caminar, respirar, despejarte.</li>
+                  </ul>
+                  <span class="pill">Económicas / familiares</span>
+                  <ul>
+                    <li>Obtener <b>claridad sobre la deuda</b> (monto, fechas, fraccionamiento).</li>
+                    <li>Explorar <b>becas o apoyos internos</b> (por situación económica o por rendimiento).</li>
+                    <li>Conversar con la familia sobre lo que implica estudiar Ciencias de la Salud y tus esfuerzos actuales.</li>
+                  </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            with col_plan:
+                st.markdown(
+                """
+                <div class="card">
+                  <h5>Plan de acción: próximos 7 días</h5>
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-circle">1</div>
+                      <span class="timeline-day">Día 1</span>
+                      <span class="timeline-content">
+                        Hacer tu calendario semanal con clases, horas de estudio y momentos de descanso.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">2</div>
+                      <span class="timeline-day">Día 2</span>
+                      <span class="timeline-content">
+                        Ir o escribir a administración para aclarar tu deuda (cifras y fechas).
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">3</div>
+                      <span class="timeline-day">Día 3</span>
+                      <span class="timeline-content">
+                        Hacer una lista de cursos más difíciles o importantes y decidir a cuáles no puedes faltar.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">4</div>
+                      <span class="timeline-day">Día 4</span>
+                      <span class="timeline-content">
+                        Acercarte a un docente de confianza o tutor académico para contar tu situación y pedir orientación.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">5</div>
+                      <span class="timeline-day">Día 5</span>
+                      <span class="timeline-content">
+                        Hacer un <b>repaso corto</b> el mismo día de una clase clave (20–30 min) y registrar cómo te sentiste (1–10).
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">6</div>
+                      <span class="timeline-day">Día 6</span>
+                      <span class="timeline-content">
+                        Conversar con algún familiar sobre tus avances y preguntar por apoyo de bienestar estudiantil/psicológico.
+                      </span>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-circle">7</div>
+                      <span class="timeline-day">Día 7</span>
+                      <span class="timeline-content">
+                        Revisar la semana: asistencia, orden en estudio, claridad económica. 
+                        Anotar 2 cosas que funcionaron bien para repetir la próxima semana.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # 6. Mensaje final
+            st.markdown(
+            """
+            <div class="card">
+              <h5>Mensaje final</h5>
+              <p>
+              Tu perfil muestra capacidades académicas sólidas (<b>promedio bueno</b>) y alta responsabilidad en tareas, 
+              en un contexto económico-familiar complejo.
+              </p>
+              <p>
+              El riesgo es <b>medio</b>, pero sin carga laboral externa este es un muy buen momento para ordenarte, 
+              pedir apoyo y consolidar tu camino en Ciencias de la Salud. 
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    
 # ==========================
 # Vista Clustering
 # ==========================
