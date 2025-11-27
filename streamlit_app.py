@@ -187,7 +187,7 @@ def vista_redes():
     with header_left:
         st.title("🎓 Predicción de riesgo de deserción")
     with header_right:
-        if st.button("➕ Agregar estudiante", use_container_width=True):
+        if st.button("➕ Simular Caso", use_container_width=True):
             st.session_state["show_form"] = True
 
     st.write("Demo usando tu modelo MLP entrenado.")
